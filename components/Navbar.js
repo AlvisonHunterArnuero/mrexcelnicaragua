@@ -8,8 +8,9 @@ const Navbar = () => (
         .nav-link {
           text-decoration: none;
         }
-        .active:after {
-          content: " (current page)";
+        .active:before {
+          content: " ➡️";
+          color: yellow !important;
         }
       `}</style>
       <Branding />

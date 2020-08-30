@@ -29,10 +29,25 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
+    "/about": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/about.js"
+    ],
     "/contact": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/contact.js"
+    ],
+    "/formulas": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/formulas.js"
+    ],
+    "/vba": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/vba.js"
     ]
   },
   "ampFirstPages": []

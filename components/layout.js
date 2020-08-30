@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "../components/header";
+import Footer from "../components/footer";
 
 function Layout({ children }) {
   return (
@@ -28,6 +29,29 @@ function Layout({ children }) {
       <Header />
       <style jsx global>
         {`
+          html,
+          body {
+            height: 100%;
+            position: relative;
+          }
+          .main-container {
+            min-height: 100vh; /* will cover the 100% of viewport */
+            overflow: hidden;
+            display: block;
+            position: relative;
+            padding-bottom: 100px; /* height of your footer */
+          }
+
+          .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #2b2d42;
+            color: white;
+            text-align: center;
+          }
+
           body {
             font-size: 17px;
             font-family: "Courier Prime", monospace;
@@ -35,6 +59,10 @@ function Layout({ children }) {
           }
           .nav-link {
             color: #fff !important;
+          }
+
+          .active {
+            color: #ffb900 !important;
           }
 
           .nav-link:hover {
@@ -60,7 +88,8 @@ function Layout({ children }) {
           }
         `}
       </style>
-      <div className="container-fluid">{children}</div>
+      <div className="container-fluid main-container">{children}</div>
+      <Footer />
     </React.Fragment>
   );
 }
